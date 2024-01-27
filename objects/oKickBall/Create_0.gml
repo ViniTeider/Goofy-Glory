@@ -20,7 +20,7 @@ function action() {
 		hsp = lengthdir_x(12, other.image_angle);
 		vsp = lengthdir_y(12, other.image_angle);
 		
-		other.weapon = noone;
+		other.owner.weapon = noone;
 		owner = noone;
 		state = ARMA.THROWN;
 	}
