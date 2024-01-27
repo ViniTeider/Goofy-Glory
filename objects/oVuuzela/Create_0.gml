@@ -8,16 +8,12 @@ uses = 3;
 
 
 function action() {
-	if uses <= 0 {
-		breakWeapon(); // ora ora retornar se não pode usar!
-		return;
-	}
+
 	show_debug_message("Atirou")
 	
 	screenshake(05, 1.1, 0.2);
 	
-	// essse trecho é só pra fazer a bala sair da ponta da vuvuzela ao invés
-	// de dentro do personagem
+	// essse trecho é só pra fazer a bala sair da ponta da vuvuzela ao invés de dentro do personagem
 	var vuvux = x + lengthdir_x((sprite_width - sprite_xoffset), image_angle);
 	var vuvuy = y + lengthdir_y((sprite_width - sprite_xoffset), image_angle);
 	
@@ -32,6 +28,11 @@ function action() {
 	image_angle += 20;
 	other.image_angle += 20;
 	alarm[0] = 5;
+	
+	if uses <= 1 {
+		breakWeapon(); // ora ora retornar se não pode usar
+		return;
+	}
 	
 	uses--;
 }

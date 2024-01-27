@@ -30,6 +30,7 @@ bounce = 0; // qtdes de bounces
 
 // Executa quando os usos da arma acabam
 function breakWeapon() {
+	other.owner.image_angle = 0;
 	state = ARMA.GROUND
 	owner.weapon = noone;
 	owner = noone;

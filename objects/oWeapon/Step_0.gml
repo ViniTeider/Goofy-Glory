@@ -19,8 +19,13 @@ switch state {
 	case ARMA.OWNED:
 		x = owner.x;
 		y = owner.y;
-	
+		
+		// Tá com um bug na hora de virar para esquerda, tem q arrumar (ele fica de ponta cabeça)
+		angulo_direcao = (point_direction(0, 0, owner.hsp, owner.vsp));
+		if (angulo_direcao >= 90) && (angulo_direcao <= 270) image_yscale = -1;
+		else image_yscale = 1;
 		image_angle = point_direction(0, 0, owner.hsp, owner.vsp);
+		
 	
 		// vamos tirando o cooldown a cada frame
 		if cooldown > 0 {
@@ -61,7 +66,7 @@ switch state {
 			vsp = -vsp; // inverte a direção 
 		}
 		
-		if ((hsp >= -0.9 && hsp <= 0.9) && (vsp >= -0.9 && vsp <= 0.9)){
+		if ((hsp >= -2 && hsp <= 2) && (vsp >= -2 && vsp <= 2)){
 			hsp = 0;
 			vsp = 0;
 			
