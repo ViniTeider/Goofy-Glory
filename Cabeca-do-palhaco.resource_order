@@ -18,9 +18,11 @@
   ],
   "ResourceOrderSettings": [
     {"name":"oProjectile","order":6,"path":"objects/oProjectile/oProjectile.yy",},
+    {"name":"oBolaDeGelo","order":7,"path":"objects/oBolaDeGelo/oBolaDeGelo.yy",},
     {"name":"oPlayerParent","order":1,"path":"objects/oPlayerParent/oPlayerParent.yy",},
     {"name":"sPlayer2","order":1,"path":"sprites/sPlayer2/sPlayer2.yy",},
     {"name":"oVuuzela","order":5,"path":"objects/oVuuzela/oVuuzela.yy",},
+    {"name":"sKicka","order":5,"path":"sprites/sKicka/sKicka.yy",},
     {"name":"oPlayer2","order":3,"path":"objects/oPlayer2/oPlayer2.yy",},
     {"name":"oWeapon","order":2,"path":"objects/oWeapon/oWeapon.yy",},
     {"name":"sWall","order":2,"path":"sprites/sWall/sWall.yy",},
