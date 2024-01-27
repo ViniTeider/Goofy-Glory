@@ -13,3 +13,7 @@ down_keyy = vk_down;
 
 pick_keyy = vk_rshift;
 action_keyy = vk_rcontrol;
+
+// Variaveis de sprites
+idle_sprite = sPlayer2Idle;
+moving_sprite = sPlayer2Running;

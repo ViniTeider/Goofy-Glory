@@ -17,15 +17,23 @@ switch state {
 		break;
 		
 	case ARMA.OWNED:
-		x = owner.x;
-		y = owner.y;
+		moving = abs(owner.hsp) + abs(owner.vsp)
+		if (sign(owner.hsp != 0)){
+			image_yscale = owner.image_xscale;
+		}
+		if(moving) {
+			// Separa a arma do player
+			x = owner.x + (sign(owner.hsp) * 13);
+			y = owner.y + (sign(owner.vsp) * 20);
+			
+			// Rotaciona a arma
+			image_angle = point_direction(0, 0, owner.hsp, owner.vsp);
+		}
 		
-		// Tá com um bug na hora de virar para esquerda, tem q arrumar (ele fica de ponta cabeça)
-		angulo_direcao = (point_direction(0, 0, owner.hsp, owner.vsp));
-		if (angulo_direcao >= 90) && (angulo_direcao <= 270) image_yscale = -1;
-		else image_yscale = 1;
-		image_angle = point_direction(0, 0, owner.hsp, owner.vsp);
-		
+		if (sign(owner.vsp) < 0){
+			depth = owner.depth + 1;	
+		} else depth = owner.depth - 1;
+	
 	
 		// vamos tirando o cooldown a cada frame
 		if cooldown > 0 {

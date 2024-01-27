@@ -25,8 +25,6 @@ function action() {
 	}
 	
 	other.owner.image_angle += 20;
-	image_angle += 20;
-	other.image_angle += 20;
 	alarm[0] = 5;
 	
 	if uses <= 1 {

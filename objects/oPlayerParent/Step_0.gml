@@ -44,7 +44,10 @@ switch state {
 			vsp = 0;
 		}
 
-
+		if (hsp != 0 && vsp != 0){
+			hsp = hsp / sqrt(2);
+			vsp = vsp / sqrt(2);
+		}
 		x += hsp;
 		y += vsp;
 		
@@ -56,7 +59,6 @@ switch state {
 			knockback_cooldown--; // Reduz o valor em 1 a cada frame
 			 
 			 image_xscale = sign(hsp); // Faz com que ele vire para a posição
-			 
 			 
 			// Faz com que exista uma colisão com a parede
 			if place_meeting(x + hsp, y, oSolid) { // Checa colisao com a velocidade
