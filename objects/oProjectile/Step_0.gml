@@ -1,5 +1,7 @@
 /// @description 
 
+owner_id = other.owner_id;
+
 if destroy {
 	instance_destroy();	
 }
