@@ -14,4 +14,6 @@ switch state {
 	case ARMA.THROWN:
 		thrown();
 		break;
+	case ARMA.PIED:
+		pie();
 }

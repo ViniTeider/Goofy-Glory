@@ -2,7 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 enum PLAYER {
 	NORMAL, // 0
-	STUNNED // 1
+	STUNNED, // 1
+	PIED
 }
 
 global.risometro_laranja = 0;

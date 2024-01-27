@@ -3,7 +3,8 @@
 enum ARMA {
 	GROUND, // 0
 	OWNED, // 1
-	THROWN // 2
+	THROWN, // 2
+	PIED
 }
 
 // Stats das armas
@@ -51,10 +52,11 @@ function action() {
 function owned() {
 	moving = abs(owner.hsp) + abs(owner.vsp)
 		
-		// Faz com que a arma não fique de ponta cabeça
+		 //Faz com que a arma não fique de ponta cabeça
 		if (sign(owner.hsp != 0)){
 			image_yscale = owner.image_xscale;
 		}
+		
 		
 		// Caso o usuário tenha controle
 		if owner.has_controller {
@@ -147,4 +149,8 @@ function thrown() {
 
 		hsp = lerp(hsp, 0, 0.01);
 		vsp = lerp(vsp, 0, 0.01);
+}
+
+function pie() {
+	show_debug_message("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 😭😱🔥")
 }

@@ -25,3 +25,10 @@ function action() {
 	uses--;
 	instance_destroy();
 }
+
+function pie() {
+	x = owner.x + 5 * owner.image_xscale;
+	y = owner.y -7;
+	image_xscale = owner.image_xscale;
+	depth = owner.depth - 1
+}

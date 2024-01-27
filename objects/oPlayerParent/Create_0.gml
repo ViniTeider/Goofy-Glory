@@ -24,7 +24,7 @@ action_keyy = noone;
 // Variaveis de velocidade / vida
 vsp = 0; // Vertical speed
 hsp = 0; // Horizontal speed
-spd = 4; // Speed
+spd = 7; // Speed
 
 // Variaveis de estado (n sei como chamar)
 state = PLAYER.NORMAL;
