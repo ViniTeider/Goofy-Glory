@@ -34,6 +34,9 @@
     "name": "sPlayer1Running",
     "path": "sprites/sPlayer1Running/sPlayer1Running.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sPlayerMask",
+    "path": "sprites/sPlayerMask/sPlayerMask.yy",
+  },
   "visible": true,
 }
