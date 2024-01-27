@@ -22,14 +22,20 @@ switch state {
 	
 		image_angle = point_direction(0, 0, owner.hsp, owner.vsp);
 	
+		// vamos tirando o cooldown a cada frame
+		if cooldown > 0 {
+			cooldown--;	
+		}
+		
+		if owner.action_key && cooldown <= 0 {
+			action();
+			cooldown = cooldown_max;
+		}
+		
 		if owner.pick_key {
 			owner.weapon = noone;
 			state = ARMA.GROUND;
 			owner = noone;
-		}
-		
-		if owner.action_key {
-			action();	
 		}
 	
 		break;

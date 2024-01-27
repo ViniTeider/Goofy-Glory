@@ -17,6 +17,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"oProjectile","order":6,"path":"objects/oProjectile/oProjectile.yy",},
     {"name":"oPlayerParent","order":1,"path":"objects/oPlayerParent/oPlayerParent.yy",},
     {"name":"sPlayer2","order":1,"path":"sprites/sPlayer2/sPlayer2.yy",},
     {"name":"oVuuzela","order":5,"path":"objects/oVuuzela/oVuuzela.yy",},
@@ -25,5 +26,6 @@
     {"name":"sWall","order":2,"path":"sprites/sWall/sWall.yy",},
     {"name":"sVuvuzela","order":3,"path":"sprites/sVuvuzela/sVuvuzela.yy",},
     {"name":"oSolid","order":4,"path":"objects/oSolid/oSolid.yy",},
+    {"name":"sBolonha","order":4,"path":"sprites/sBolonha/sBolonha.yy",},
   ],
 }
