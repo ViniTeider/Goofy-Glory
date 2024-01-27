@@ -18,4 +18,6 @@ owner = noone;
 
 
 // Fucao paa a arma fazx popo
-function action() {};
+function action() {
+	show_debug_message($"Action for object: {self.name}")
+};

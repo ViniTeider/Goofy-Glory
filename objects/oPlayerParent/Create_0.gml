@@ -1,5 +1,6 @@
 /// @desc Insert description here
 
+weapon = noone;
 
 vsp = 0;
 hsp = 0;

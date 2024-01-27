@@ -8,9 +8,10 @@ player_contact = instance_place(x, y, oPlayerParent);
 switch state {
 	case ARMA.GROUND:
 		with player_contact {
-			if pick_key {
+			if pick_key && weapon == noone {
 				other.state = ARMA.OWNED;
 				other.owner = self;
+				weapon = other;
 			}
 		}
 		break;
@@ -20,6 +21,12 @@ switch state {
 		y = owner.y;
 	
 		image_angle = point_direction(0, 0, owner.hsp, owner.vsp);
+	
+		if owner.pick_key {
+			owner.weapon = noone;
+			state = ARMA.GROUND;
+			owner = noone;
+		}
 	
 		break;
 }

@@ -14,4 +14,7 @@ if place_meeting(x, y + vsp, oSolid) { // Checa colisao com a velocidade
 	}	
 	vsp = 0;
 }
-	
+
+// Verifica se o botão das ações foi clicado
+pick_key = keyboard_check_pressed(pick_keyy);
+action_key = keyboard_check_pressed(action_keyy);
