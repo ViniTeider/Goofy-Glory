@@ -30,6 +30,7 @@ switch state {
 		if owner.action_key && cooldown <= 0 {
 			action();
 			cooldown = cooldown_max;
+			break;
 		}
 		
 		if owner.pick_key {
@@ -39,7 +40,7 @@ switch state {
 		}
 	
 		break;
-		
+
 	case ARMA.THROWN:
 	
 			// Faz com que exista uma colisão com a parede

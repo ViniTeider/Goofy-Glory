@@ -6,9 +6,12 @@ event_inherited();
 cooldown = 30;
 uses = 3;
 
+
 function action() {
-	if uses <= 0 return; // ora ora retornar se não pode usar!
-	
+	if uses <= 0 {
+		breakWeapon(); // ora ora retornar se não pode usar!
+		return;
+	}
 	show_debug_message("Atirou")
 	
 	// essse trecho é só pra fazer a bala sair da ponta da vuvuzela ao invés
