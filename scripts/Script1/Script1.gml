@@ -4,3 +4,12 @@ enum PLAYER {
 	NORMAL, // 0
 	STUNNED // 1
 }
+
+global.risometro_laranja = 0;
+global.risometro_azul = 0;
+
+
+enum COLOR {
+	BLUE,
+	ORANGE
+}

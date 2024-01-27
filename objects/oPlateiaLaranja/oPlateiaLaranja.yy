@@ -1,16 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oBananaGround",
+  "name": "oPlateiaLaranja",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Objects/Weapons.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sBananaGround",
-    "path": "sprites/sBananaGround/sBananaGround.yy",
+    "name": "sPlateiaLaranja",
+    "path": "sprites/sPlateiaLaranja/sPlateiaLaranja.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -8,6 +8,8 @@ right_keyy = ord("D");
 up_keyy = ord("W");
 down_keyy = ord("S");
 
+myColor = COLOR.ORANGE;
+
 pick_keyy = ord("F");
 action_keyy = ord("E");
 

@@ -4,7 +4,6 @@
 idle_sprite = sPlayer1Idle;
 moving_sprite = sPlayer1Running;
 
-
 // Weapon que está sendo usada
 weapon = noone;
 
@@ -17,6 +16,8 @@ down_key = noone;
 pick_key = noone;
 action_key = noone;
 
+myColor = COLOR.BLUE;
+
 pick_keyy = noone;
 action_keyy = noone;
 
@@ -24,23 +25,34 @@ action_keyy = noone;
 vsp = 0; // Vertical speed
 hsp = 0; // Horizontal speed
 spd = 4; // Speed
-hp = 10; // HP
 
 // Variaveis de estado (n sei como chamar)
 state = PLAYER.NORMAL;
-knockback_cooldown = 60;
+knockback_cooldown = 30;
 
 // Função de knockback (é chamada quando o player colide)
-function knockback(distancia, direcao, dano) {
+function knockback(distancia, direcao) {
 	// TODO: Arrumar para ir mais rapido e menos longe?
 
 	// ScreenShake
 	screenshake(05, 3.5, 0.2);
 
 	// Alteração das variaveis
-    hp -= dano
     hsp = lengthdir_x(distancia, direcao);
     vsp = lengthdir_y(distancia, direcao);
     state = PLAYER.STUNNED;
     knockback_cooldown = 60
+}
+
+function hit(dano) {
+	switch myColor {
+		case COLOR.BLUE:
+			global.risometro_laranja += 1;
+			global.risometro_azul = max(0, global.risometro_azul - dano);
+			break;
+		case COLOR.ORANGE:
+			global.risometro_azul += dano;
+			global.risometro_laranja = max(0, global.risometro_laranja - dano);
+			break;
+	}
 }

@@ -10,6 +10,7 @@ right_keyy = vk_right;
 up_keyy = vk_up;
 down_keyy = vk_down;
 
+myColor = COLOR.BLUE;
 
 pick_keyy = vk_rshift;
 action_keyy = vk_rcontrol;
