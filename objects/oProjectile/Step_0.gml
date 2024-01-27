@@ -3,6 +3,15 @@
 owner_id = other.owner_id;
 
 if destroy {
+	
+	if surface_exists(oDebrisManager.debris_surface) {
+		surface_set_target(oDebrisManager.debris_surface);
+	
+		draw_sprite_ext(sprite_index, image_index, x, y+5, image_xscale, image_yscale, image_angle, c_white, 1);
+	
+		surface_reset_target();
+	}
+	
 	instance_destroy();	
 }
 
