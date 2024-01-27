@@ -19,6 +19,8 @@
   "ResourceOrderSettings": [
     {"name":"oProjectile","order":6,"path":"objects/oProjectile/oProjectile.yy",},
     {"name":"oPlayerParent","order":1,"path":"objects/oPlayerParent/oPlayerParent.yy",},
+    {"name":"sKickBall","order":5,"path":"sprites/sKickBall/sKickBall.yy",},
+    {"name":"oKickBall","order":7,"path":"objects/oKickBall/oKickBall.yy",},
     {"name":"sPlayer2","order":1,"path":"sprites/sPlayer2/sPlayer2.yy",},
     {"name":"oVuuzela","order":5,"path":"objects/oVuuzela/oVuuzela.yy",},
     {"name":"oPlayer2","order":3,"path":"objects/oPlayer2/oPlayer2.yy",},
