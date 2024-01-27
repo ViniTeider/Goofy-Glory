@@ -52,6 +52,7 @@
     {"id":{"name":"sKingSerious","path":"sprites/sKingSerious/sKingSerious.yy",},},
     {"id":{"name":"sDuck","path":"sprites/sDuck/sDuck.yy",},},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},},
+    {"id":{"name":"oBananaGround","path":"objects/oBananaGround/oBananaGround.yy",},},
     {"id":{"name":"oDuck","path":"objects/oDuck/oDuck.yy",},},
     {"id":{"name":"sPlayer1Running","path":"sprites/sPlayer1Running/sPlayer1Running.yy",},},
     {"id":{"name":"oPlayer1","path":"objects/oPlayer1/oPlayer1.yy",},},

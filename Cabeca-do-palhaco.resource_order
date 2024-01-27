@@ -32,6 +32,7 @@
     {"name":"sKingSerious","order":2,"path":"sprites/sKingSerious/sKingSerious.yy",},
     {"name":"sDuck","order":2,"path":"sprites/sDuck/sDuck.yy",},
     {"name":"sBackground","order":6,"path":"sprites/sBackground/sBackground.yy",},
+    {"name":"oBananaGround","order":5,"path":"objects/oBananaGround/oBananaGround.yy",},
     {"name":"oDuck","order":1,"path":"objects/oDuck/oDuck.yy",},
     {"name":"sPlayer1Running","order":1,"path":"sprites/sPlayer1Running/sPlayer1Running.yy",},
     {"name":"sPlayer2Idle","order":3,"path":"sprites/sPlayer2Idle/sPlayer2Idle.yy",},
