@@ -30,6 +30,7 @@ switch state {
 		if owner.action_key && cooldown <= 0 {
 			action();
 			cooldown = cooldown_max;
+			break;
 		}
 		
 		if owner.pick_key {

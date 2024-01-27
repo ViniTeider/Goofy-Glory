@@ -35,6 +35,7 @@
   },
   "resources": [
     {"id":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},},
+    {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
     {"id":{"name":"oPlayerParent","path":"objects/oPlayerParent/oPlayerParent.yy",},},
     {"id":{"name":"oPlayer1","path":"objects/oPlayer1/oPlayer1.yy",},},
     {"id":{"name":"sPlayer1","path":"sprites/sPlayer1/sPlayer1.yy",},},

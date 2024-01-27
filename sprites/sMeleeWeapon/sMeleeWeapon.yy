@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "sBolonha",
-  "bbox_bottom": 21,
-  "bbox_left": 10,
-  "bbox_right": 20,
-  "bbox_top": 11,
+  "name": "sMeleeWeapon",
+  "bbox_bottom": 24,
+  "bbox_left": 4,
+  "bbox_right": 28,
+  "bbox_top": 7,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"145dfe82-23bd-4144-b0a5-a73952e6035b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"444ad25e-55c3-4f9e-863c-678d72617562",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b6e2d4dc-a8d4-43f9-86da-2a2406682551","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"04ad1a1f-bbec-4a42-9fbb-c199f6d64bcb","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "sBolonha",
+    "name": "sMeleeWeapon",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"145dfe82-23bd-4144-b0a5-a73952e6035b","path":"sprites/sBolonha/sBolonha.yy",},},},"Disabled":false,"id":"f072edca-d0eb-4a74-9b87-373fe56af09b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"444ad25e-55c3-4f9e-863c-678d72617562","path":"sprites/sMeleeWeapon/sMeleeWeapon.yy",},},},"Disabled":false,"id":"2e4761e5-9bb8-489c-8538-bdd6bb1c3848","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
