@@ -59,6 +59,7 @@ switch state {
 			knockback_cooldown--; // Reduz o valor em 1 a cada frame
 			 
 			 image_xscale = sign(hsp); // Faz com que ele vire para a posição
+			 image_angle += 20;
 			 
 			// Faz com que exista uma colisão com a parede
 			if place_meeting(x + hsp, y, oSolid) { // Checa colisao com a velocidade
@@ -91,6 +92,7 @@ switch state {
 			 
 		} else {
 			state = PLAYER.NORMAL
+			image_angle = 0;
 		    break; 
 		}
 }
