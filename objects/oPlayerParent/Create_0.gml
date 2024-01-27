@@ -8,3 +8,6 @@ spd = 4;
 
 pick_key = noone;
 action_key = noone;
+
+pick_keyy = noone;
+action_keyy = noone;

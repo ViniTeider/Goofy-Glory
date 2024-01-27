@@ -27,6 +27,10 @@ switch state {
 			state = ARMA.GROUND;
 			owner = noone;
 		}
+		
+		if owner.action_key {
+			action();	
+		}
 	
 		break;
 }

@@ -19,5 +19,7 @@ owner = noone;
 
 // Fucao paa a arma fazx popo
 function action() {
-	show_debug_message($"Action for object: {self.name}")
+											// Cara de quem foi a ideia de colocar self.name
+											// coisa do chico certeza kkkkkkkkkk
+	show_debug_message($"Action for object: {object_get_name(object_index)}")
 };
