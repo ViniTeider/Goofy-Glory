@@ -48,6 +48,7 @@
     {"id":{"name":"oPlayerParent","path":"objects/oPlayerParent/oPlayerParent.yy",},},
     {"id":{"name":"oKing","path":"objects/oKing/oKing.yy",},},
     {"id":{"name":"sPieThrown","path":"sprites/sPieThrown/sPieThrown.yy",},},
+    {"id":{"name":"oShadowDrawer","path":"objects/oShadowDrawer/oShadowDrawer.yy",},},
     {"id":{"name":"sKingLaughing","path":"sprites/sKingLaughing/sKingLaughing.yy",},},
     {"id":{"name":"sPieFlying","path":"sprites/sPieFlying/sPieFlying.yy",},},
     {"id":{"name":"sKingSerious","path":"sprites/sKingSerious/sKingSerious.yy",},},

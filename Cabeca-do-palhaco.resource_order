@@ -28,6 +28,7 @@
     {"name":"oPlayerParent","order":2,"path":"objects/oPlayerParent/oPlayerParent.yy",},
     {"name":"oKing","order":8,"path":"objects/oKing/oKing.yy",},
     {"name":"sPieThrown","order":9,"path":"sprites/sPieThrown/sPieThrown.yy",},
+    {"name":"oShadowDrawer","order":3,"path":"objects/oShadowDrawer/oShadowDrawer.yy",},
     {"name":"sKingLaughing","order":1,"path":"sprites/sKingLaughing/sKingLaughing.yy",},
     {"name":"sPieFlying","order":8,"path":"sprites/sPieFlying/sPieFlying.yy",},
     {"name":"sKingSerious","order":2,"path":"sprites/sKingSerious/sKingSerious.yy",},
