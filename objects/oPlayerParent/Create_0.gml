@@ -30,6 +30,10 @@ spd = 4; // Speed
 state = PLAYER.NORMAL;
 knockback_cooldown = 30;
 
+// Variaveis referentes ao controle
+gp_index = noone;
+controller_color = noone;
+
 // Função de knockback (é chamada quando o player colide)
 function knockback(distancia, direcao) {
 	// TODO: Arrumar para ir mais rapido e menos longe?

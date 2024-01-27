@@ -16,3 +16,7 @@ action_keyy = ord("E");
 // Variaveis de sprites
 idle_sprite = sPlayer1Idle;
 moving_sprite = sPlayer1Running;
+
+// Variaveis do controle
+gp_index = 4;
+controller_color = $fcba003;

@@ -18,3 +18,7 @@ action_keyy = vk_rcontrol;
 // Variaveis de sprites
 idle_sprite = sPlayer2Idle;
 moving_sprite = sPlayer2Running;
+
+// Variaveis do controle
+gp_index = 5;
+controller_color = $008af2;
