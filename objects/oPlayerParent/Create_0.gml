@@ -1,4 +1,9 @@
-/// @desc Insert description here
+/// @desc Declaração de coisas
+
+// Variaveis de sprites
+idle_sprite = sPlayer1Idle;
+moving_sprite = sPlayer1Running;
+
 
 // Weapon que está sendo usada
 weapon = noone;
@@ -19,7 +24,7 @@ action_keyy = noone;
 vsp = 0; // Vertical speed
 hsp = 0; // Horizontal speed
 spd = 4; // Speed
-hp = 100; // HP
+hp = 10; // HP
 
 // Variaveis de estado (n sei como chamar)
 state = PLAYER.NORMAL;

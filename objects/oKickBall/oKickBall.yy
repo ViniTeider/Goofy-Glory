@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Weapons",
+    "path": "folders/Objects/Weapons.yy",
   },
   "parentObjectId": {
     "name": "oWeapon",

@@ -10,3 +10,7 @@ down_keyy = ord("S");
 
 pick_keyy = ord("F");
 action_keyy = ord("E");
+
+// Variaveis de sprites
+idle_sprite = sPlayer1Idle;
+moving_sprite = sPlayer1Running;
