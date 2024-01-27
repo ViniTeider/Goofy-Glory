@@ -58,7 +58,7 @@ switch state {
 		if knockback_cooldown > 0 {
 			knockback_cooldown--; // Reduz o valor em 1 a cada frame
 			 
-			 image_xscale = sign(hsp); // Faz com que ele vire para a posição
+			 image_xscale = sign(hsp) != 0 ? hsp : 1; // Faz com que ele vire para a posição
 			 image_angle += 20;
 			 
 			// Faz com que exista uma colisão com a parede
