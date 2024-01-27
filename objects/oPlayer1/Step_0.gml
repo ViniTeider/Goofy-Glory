@@ -9,7 +9,7 @@ hsp = (right_key - left_key) * spd;
 vsp = (down_key - up_key) * spd;
 
 
-event_inherited();
+event_inherited(); // aqui troca pela colisao
 
 x += hsp;
 y += vsp;

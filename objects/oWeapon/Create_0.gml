@@ -2,7 +2,8 @@
 
 enum ARMA {
 	GROUND, // 0
-	OWNED // 1
+	OWNED, // 1
+	THROWN,
 }
 	
 // Stats das armas
@@ -19,6 +20,13 @@ player_contact = noone;
 
 //dono da arma
 owner = noone;
+
+
+// variaveis pra jogar a arma
+hsp = 0;
+vsp = 0;
+bounce = 0; // qtdes de bounces
+			// qnd n tiver mais bounces a velocidade para da pra usar -1 como infinito.
 
 
 // Fucao paa a arma fazx popo
