@@ -9,7 +9,7 @@ uses = 3;
 
 function action() {
 	
-	gamepad_set_vibration(owner.gp_index, 1, 1);
+	//gamepad_set_vibration(owner.gp_index, 1, 1);
 	
 	screenshake(05, 1.1, 0.2);
 	

@@ -30,3 +30,35 @@ function action() {
 	uses--;
 	instance_destroy();
 }
+
+function thrown() {
+	image_angle += 2;
+	
+	// Faz com que exista uma colisão com a parede
+	if place_meeting(x + hsp, y, oSolid) { // Checa colisao com a velocidade
+		while(!place_meeting(x + sign(hsp), y, oSolid)) { // Repete até estar pixel a pixel com a parede
+			x += sign(hsp);
+		}	
+		hsp = -hsp; // inverte a direção 
+	}
+
+	if place_meeting(x, y + vsp, oSolid) { // Checa colisao com a velocidade
+		while(!place_meeting(x, y + sign(vsp), oSolid)) { // Repete até estar pixel a pixel com a parede
+			y += sign(vsp);
+		}	
+		vsp = -vsp; // inverte a direção 
+	}
+		
+	if ((hsp >= -2 && hsp <= 2) && (vsp >= -2 && vsp <= 2)){
+		hsp = 0;
+		vsp = 0;
+			
+		state = ARMA.GROUND;
+	}
+
+	x += hsp; 
+	y += vsp;
+
+	hsp = lerp(hsp, 0, 0.01);
+	vsp = lerp(vsp, 0, 0.01);
+}
