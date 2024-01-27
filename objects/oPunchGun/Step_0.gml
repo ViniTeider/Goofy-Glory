@@ -4,7 +4,10 @@ event_inherited();
 
 
 if (image_angle == 270 || image_angle == 90) {
-	sprite_index = sGunUp;
+	if cooldown > 0 sprite_index = sGunUpEmpty
+	else sprite_index = sGunUp;
 } else {
-	sprite_index = sGun;	
+	if cooldown > 0 sprite_index = sGunEmpty
+	else sprite_index = sGun;	
+	
 }

@@ -47,6 +47,7 @@
     {"id":{"name":"wave","path":"scripts/wave/wave.yy",},},
     {"id":{"name":"sKingHappy","path":"sprites/sKingHappy/sKingHappy.yy",},},
     {"id":{"name":"oPie","path":"objects/oPie/oPie.yy",},},
+    {"id":{"name":"sGunUpEmpty","path":"sprites/sGunUpEmpty/sGunUpEmpty.yy",},},
     {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
     {"id":{"name":"fDefault","path":"fonts/fDefault/fDefault.yy",},},
     {"id":{"name":"sBananaHold","path":"sprites/sBananaHold/sBananaHold.yy",},},
