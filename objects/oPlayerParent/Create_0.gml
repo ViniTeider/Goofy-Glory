@@ -45,6 +45,8 @@ function knockback(distancia, direcao) {
 }
 
 function hit(dano) {
+	oKing.laugh_time = 60;
+	
 	switch myColor {
 		case COLOR.BLUE:
 			global.risometro_laranja += 1;
