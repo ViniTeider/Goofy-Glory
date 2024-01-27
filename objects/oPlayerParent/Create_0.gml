@@ -47,6 +47,11 @@ function knockback(distancia, direcao) {
 function hit(dano) {
 	oKing.laugh_time = 60;
 	
+	with instance_create_layer(oKing.x, oKing.y - oKing.sprite_yoffset, "Instances", oFloatingText) {
+		text = "HaHa";
+	}
+	
+	
 	switch myColor {
 		case COLOR.BLUE:
 			global.risometro_laranja += 1;
