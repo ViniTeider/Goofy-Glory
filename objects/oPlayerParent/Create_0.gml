@@ -33,6 +33,7 @@ knockback_cooldown = 30;
 // Variaveis referentes ao controle
 gp_index = noone;
 controller_color = noone;
+has_controller= noone;
 
 // Função de knockback (é chamada quando o player colide)
 function knockback(distancia, direcao) {

@@ -22,6 +22,7 @@ player_contact = noone;
 owner = noone;
 
 // variaveis pra jogar a arma
+angle = 0;
 hsp = 0;
 vsp = 0;
 bounce = 0; // qtdes de bounces

@@ -1,7 +1,9 @@
 /// @desc Insert description here
-
-gamepad_set_axis_deadzone(gp_index, 0.2); // seta o deadzone do analogico do controle
-gamepad_set_color(gp_index, controller_color); // seta a cor
+if (gamepad_is_connected(gp_index)) {
+	has_controller = true;
+	gamepad_set_axis_deadzone(gp_index, 0.2); // seta o deadzone do analogico do controle
+	gamepad_set_color(gp_index, controller_color); // seta a cor
+}
 
 // Verifica se foi clicado alguma das teclas de movimentação
 left_key = keyboard_check(left_keyy) || gamepad_axis_value(gp_index, gp_axislh) < 0;
@@ -12,7 +14,7 @@ down_key = keyboard_check(down_keyy) || gamepad_axis_value(gp_index, gp_axislv) 
 
 // Verifica se o botão das ações foi clicado
 pick_key = keyboard_check_pressed(pick_keyy) || gamepad_button_check_pressed(gp_index, gp_face1);
-action_key = keyboard_check_pressed(action_keyy) || gamepad_button_check_pressed(gp_index, gp_face3);
+action_key = keyboard_check_pressed(action_keyy) || gamepad_button_check_pressed(gp_index, gp_shoulderrb);
 
 
 // muda o movimento caso o player esteja em estado estunado

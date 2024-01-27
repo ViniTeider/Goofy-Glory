@@ -1,4 +1,5 @@
 /// @description 
+randomise();
 
 
 // Inherit the parent event
@@ -6,6 +7,8 @@ event_inherited();
 
 uses = 1;
 cooldown = 0;
+
+if (random(1) < 0.1) sprite_index = sDuckHat;
 
 function action() {
 	if uses <= 0 return; // ora ora retornar se não pode usar!

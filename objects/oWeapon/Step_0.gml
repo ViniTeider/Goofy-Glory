@@ -18,22 +18,45 @@ switch state {
 		
 	case ARMA.OWNED:
 		moving = abs(owner.hsp) + abs(owner.vsp)
+		
+		// Faz com que a arma não fique de ponta cabeça
 		if (sign(owner.hsp != 0)){
 			image_yscale = owner.image_xscale;
 		}
-		if(moving) {
+		
+		// Caso o usuário tenha controle
+		if owner.has_controller {
+				depth = owner.depth - 1; // Faz com que a arma não fique por baixo do player
+				
+				var joystick_h = gamepad_axis_value(owner.gp_index, gp_axisrh);
+				var joystick_v = gamepad_axis_value(owner.gp_index, gp_axisrv);
+		
+				var distance = 35; // Distancia da arma do player
+		
+				// Rotaciona para a direção do joystick
+				if ((point_direction(0, 0, joystick_h, joystick_v)) != 0) {
+					angle = point_direction(0, 0, joystick_h, joystick_v);
+				}
+				
+				image_angle = angle;
+					
+				x = owner.x + lengthdir_x(distance, angle);
+				y = owner.y + lengthdir_y(distance, angle);
+
+		}
+		// Caso não tenha controle (no teclado) e esteja se movendo
+		else if(moving) {
 			// Separa a arma do player
 			x = owner.x + (sign(owner.hsp) * 13);
 			y = owner.y + (sign(owner.vsp) * 20);
-			
 			// Rotaciona a arma
 			image_angle = point_direction(0, 0, owner.hsp, owner.vsp);
+			
+			// Coloca a arma por baixo caso esteja indo para cima
+			if (sign(owner.vsp) < 0) depth = owner.depth + 1;	
+			else depth = owner.depth - 1;
 		}
 		
-		if (sign(owner.vsp) < 0){
-			depth = owner.depth + 1;	
-		} else depth = owner.depth - 1;
-	
 	
 		// vamos tirando o cooldown a cada frame
 		if cooldown > 0 {
@@ -88,5 +111,3 @@ switch state {
 		vsp = lerp(vsp, 0, 0.01);
 	break;
 }
-
-	

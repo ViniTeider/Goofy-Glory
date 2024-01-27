@@ -3,13 +3,13 @@
 // Inherit the parent event
 event_inherited();
 
-cooldown = 30;
+cooldown_max = 80;
 uses = 3;
 
 
 function action() {
-
-	show_debug_message("Atirou")
+	
+	gamepad_set_vibration(owner.gp_index, 1, 1);
 	
 	screenshake(05, 1.1, 0.2);
 	
@@ -25,6 +25,7 @@ function action() {
 	}
 	
 	other.owner.image_angle += 20;
+	sprite_index = sGunEmpty
 	alarm[0] = 5;
 	
 	if uses <= 1 {
