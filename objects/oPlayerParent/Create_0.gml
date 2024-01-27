@@ -32,11 +32,18 @@ knockback_cooldown = 60;
 
 // Função de knockback (é chamada quando o player colide)
 function knockback(distancia, direcao, dano, speed) {
-	// TODO: Arrumar para ir mais rapido e menos longe
+	// TODO: Arrumar para ir mais rapido e menos longe?
+
+	// ScreenShake
+	screenshake(05, 2.5, 0.2);
+
+	// Alteração das variaveis
     hp -= dano
     hsp = lengthdir_x(distancia, direcao) * speed;
     vsp = lengthdir_y(distancia, direcao) * speed;
     state = PLAYER.STUNNED;
     knockback_cooldown = 60
+	
+
 	
 }

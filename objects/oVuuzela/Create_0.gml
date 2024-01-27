@@ -14,17 +14,25 @@ function action() {
 	}
 	show_debug_message("Atirou")
 	
+	screenshake(05, 1.1, 0.2);
+	
 	// essse trecho é só pra fazer a bala sair da ponta da vuvuzela ao invés
 	// de dentro do personagem
 	var vuvux = x + lengthdir_x((sprite_width - sprite_xoffset), image_angle);
 	var vuvuy = y + lengthdir_y((sprite_width - sprite_xoffset), image_angle);
 	
 	with instance_create_layer(vuvux, vuvuy, "Instances", oProjectile) {
-		image_angle = other.image_angle; // só pro sprite nao ficar o mesmo
+		//image_angle = other.image_angle; // só pro sprite nao ficar o mesmo
 		direction = other.image_angle; // direção vai ser pra onde a vuvu aponta
 		speed = 14; // valor arbitrário mudar conforme necessidade
 		owner_id = other.owner.id; // passamos o id de quem atira pra prevenir ela de dar dano
 		// em quem atirou
 	}
+	
+	other.owner.image_angle += 20;
+	image_angle += 20;
+	other.image_angle += 20;
+	alarm[0] = 5;
+	
 	uses--;
 }
