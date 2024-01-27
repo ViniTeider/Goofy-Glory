@@ -33,4 +33,5 @@ function knockback(distancia, direcao, dano, speed) {
     vsp = lengthdir_y(distancia, direcao) * speed;
     state = PLAYER.STUNNED;
     knockback_cooldown = 60
+	
 }
