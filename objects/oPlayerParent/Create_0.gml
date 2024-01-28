@@ -56,10 +56,9 @@ function hit(dano) {
 		text = "HaHa";
 	}
 	
-	
 	switch myColor {
 		case COLOR.BLUE:
-			global.risometro_laranja += 1;
+			global.risometro_laranja += dano;
 			global.risometro_azul = max(0, global.risometro_azul - dano);
 			break;
 		case COLOR.ORANGE:

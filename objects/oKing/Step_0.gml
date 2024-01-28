@@ -10,21 +10,3 @@ else {
 	sprite_index = sKingSerious;
 	image_speed = 0.5;
 }	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

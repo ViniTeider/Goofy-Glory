@@ -6,6 +6,3 @@ if (lifespan <= 0) {
 }
 
 lifespan--;
-
-
-

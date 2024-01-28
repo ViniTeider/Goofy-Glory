@@ -16,7 +16,7 @@ down_key = keyboard_check(down_keyy) || gamepad_axis_value(gp_index, gp_axislv) 
 pick_key = keyboard_check_pressed(pick_keyy) || gamepad_button_check_pressed(gp_index, gp_face1);
 action_key = keyboard_check_pressed(action_keyy) || gamepad_button_check_pressed(gp_index, gp_shoulderrb);
 
-
+draw_text(x, y, global.risometro_laranja)
 // muda o movimento caso o player esteja em estado estunado
 switch state {
 	

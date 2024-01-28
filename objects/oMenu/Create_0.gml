@@ -7,4 +7,4 @@ has_controller= noone;
 global.transition_surface = -1;
 global.alpha = 0;
 global.transitioning = false;
-global.bgImage = tela_inicial; 
+global.bgImage = sStartScreen; 

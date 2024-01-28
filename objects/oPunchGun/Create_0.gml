@@ -7,8 +7,6 @@ cooldown_max = 80;
 cooldown = 0
 uses = 3;
 
-show_debug_message(sprite_index)
-
 function action() {
 	//gamepad_set_vibration(owner.gp_index, 1, 1);
 	
@@ -28,7 +26,6 @@ function action() {
 	
 	other.owner.image_angle += 20;
 	sprite_index = sGunEmpty;
-	show_debug_message(sprite_index) 
 	alarm[0] = 5;
 	
 	if uses <= 1 {

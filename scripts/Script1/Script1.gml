@@ -8,7 +8,9 @@ enum PLAYER {
 
 global.risometro_laranja = 0;
 global.risometro_azul = 0;
-
+global.orangeWins = 0
+global.blueWins = 0
+global.roundQuantity = 1
 
 enum COLOR {
 	BLUE,
