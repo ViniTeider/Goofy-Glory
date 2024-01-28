@@ -1,4 +1,20 @@
 /// @desc Insert description here
+
+//var gp_num = gamepad_get_device_count();
+//for (var i = 0; i < gp_num; i++;)
+//{
+//    if gamepad_is_connected(i)
+//    {
+//        global.gp[i] = true;
+//    }
+//    else
+//    {
+//        global.gp[i] = false;
+//    }
+//}
+
+//show_debug_message(gp_num);
+
 if (gamepad_is_connected(gp_index)) {
 	has_controller = true;
 	gamepad_set_axis_deadzone(gp_index, 0.2); // seta o deadzone do analogico do controle

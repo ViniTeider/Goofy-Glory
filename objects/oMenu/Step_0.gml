@@ -1,9 +1,7 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
-show_debug_message(gamepad_is_connected(gp_index))
-
-start_button = gamepad_button_check_pressed(4, gp_face1);
+start_button = keyboard_check(vk_enter) || gamepad_button_check_pressed(gp_index, gp_face1);
 
 
 if (start_button) {

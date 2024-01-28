@@ -27,7 +27,7 @@ owner = noone;
 angle = 0;
 hsp = 0;
 vsp = 0;
-bounce = 0; // qtdes de bounces
+bounce = 1; // qtdes de bounces
 			// qnd n tiver mais bounces a velocidade para da pra usar -1 como infinito.
 
 
@@ -130,6 +130,7 @@ function thrown() {
 				x += sign(hsp);
 			}	
 			hsp = -hsp; // inverte a direção 
+			bounce --;
 		}
 
 		if place_meeting(x, y + vsp, oSolid) { // Checa colisao com a velocidade
@@ -137,6 +138,8 @@ function thrown() {
 				y += sign(vsp);
 			}	
 			vsp = -vsp; // inverte a direção 
+			bounce --;
+			
 		}
 		
 		if ((hsp >= -2 && hsp <= 2) && (vsp >= -2 && vsp <= 2)){

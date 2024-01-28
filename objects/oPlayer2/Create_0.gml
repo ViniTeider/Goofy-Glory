@@ -20,5 +20,5 @@ idle_sprite = sPlayer2Idle;
 moving_sprite = sPlayer2Running;
 
 // Variaveis do controle
-gp_index = 5;
+gp_index = 1;
 controller_color = $008af2;
