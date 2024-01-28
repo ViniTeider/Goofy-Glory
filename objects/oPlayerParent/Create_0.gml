@@ -53,6 +53,11 @@ function knockback(distancia, direcao) {
 }
 
 function hit(dano) {
+	
+	alarm[1] = 300;
+	
+	audio_play_sound(garagalhadas_ggjcwb,0,false,1,0);
+	
 	if(pied) {
 		pied = false
 		instance_destroy(pie);

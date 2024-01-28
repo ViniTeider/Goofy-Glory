@@ -1,4 +1,6 @@
-hasWinner = false
+hasWinner = false;
+
+alarm[1] = 600;
 
 function winCutscene(looser) {
 	var anvilX = looser.x;

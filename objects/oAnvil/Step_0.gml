@@ -6,7 +6,7 @@ x = owner.x
 //	y += 10;
 //}
 
-if (!place_meeting(x,y, owner)){
+if (!place_meeting(x,y + 10, owner)){
 	y += 10;
 }
 

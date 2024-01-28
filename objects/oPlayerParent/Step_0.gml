@@ -76,6 +76,8 @@ switch state {
 	case PLAYER.STUNNED:
 		if knockback_cooldown > 0 {
 			knockback_cooldown--; // Reduz o valor em 1 a cada frame
+			
+			if(weapon) weapon.image_alpha = 0;
 			 
 			 if hsp != 0 {
 				 image_xscale = sign(hsp);
@@ -112,6 +114,7 @@ switch state {
 		
 			break;
 			} else {
+				if(weapon) weapon.image_alpha = 1;
 				state = PLAYER.NORMAL
 				image_angle = 0;
 				break; 
@@ -123,7 +126,7 @@ switch state {
 
 
 // Faz a verificação da bigorna caindo
-if place_meeting(x,y - 50 ,oAnvil){
+if place_meeting(x,y - 55 ,oAnvil){
 	show_debug_message(image_yscale);
 	
 	audio_stop_sound(anvilFalling);
