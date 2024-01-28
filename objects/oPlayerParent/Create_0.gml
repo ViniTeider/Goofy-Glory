@@ -66,19 +66,22 @@ function hit(dano) {
 	
 	oKing.laugh_time = 60;
 	
-	with instance_create_layer(oKing.x, oKing.y - oKing.sprite_yoffset, "Instances", oFloatingText) {
-		text = "HaHa";
-	}
 	
 	switch myColor {
 		case COLOR.BLUE:
 			global.risometro_laranja += dano;
+			moveDir = -1
 			global.risometro_azul = max(0, global.risometro_azul - dano*0.5);
 			break;
 		case COLOR.ORANGE:
 			global.risometro_azul += dano;
+			moveDir = 1
 			global.risometro_laranja = max(0, global.risometro_laranja - dano*0.5);
 			break;
+	}
+
+	with(instance_create_layer(oKing.x, oKing.y + 20, "Instances", oLaught)) {
+		moveDir = other.moveDir
 	}
 }
 

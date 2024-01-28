@@ -9,4 +9,5 @@ if laugh_time > 0 {
 else {
 	sprite_index = sKingSerious;
 	image_speed = 0.5;
-}	
+}
+
