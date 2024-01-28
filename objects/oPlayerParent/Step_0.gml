@@ -112,10 +112,37 @@ switch state {
 		
 			break;
 			} else {
-		state = PLAYER.NORMAL
-		image_angle = 0;
-		break; 
+				state = PLAYER.NORMAL
+				image_angle = 0;
+				break; 
+		}
+		
+		case PLAYER.LOST:
+			break;
+}
+
+
+// Faz a verificação da bigorna caindo
+if place_meeting(x,y - 50 ,oAnvil){
+	show_debug_message(image_yscale);
+	
+	audio_stop_sound(anvilFalling);
+	if (!audio_is_playing(anvilHit)){
+		audio_play_sound(anvilHit,0,false,1,0);
+	}
+	
+	if (image_yscale > 0.25){
+		image_yscale = image_yscale  - 0.09;
 	}
 }
+
+
+
+
+
+
+
+
+
 
 depth = -y

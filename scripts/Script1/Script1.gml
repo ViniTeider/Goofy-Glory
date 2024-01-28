@@ -3,13 +3,14 @@
 enum PLAYER {
 	NORMAL, // 0
 	STUNNED, // 1
+	LOST
 }
 
 global.risometro_laranja = 0;
 global.risometro_azul = 0;
 global.orangeWins = 0
 global.blueWins = 0
-global.roundQuantity = 3
+global.roundQuantity = 3;
 
 enum COLOR {
 	BLUE,

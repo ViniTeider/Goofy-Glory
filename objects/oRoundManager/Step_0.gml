@@ -1,15 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-show_debug_message(global.risometro_azul)
-show_debug_message(global.risometro_laranja)
+//show_debug_message(global.risometro_azul)
+//show_debug_message(global.risometro_laranja)
 
-if(global.risometro_azul >= 10) {
+if(!hasWinner) {
+	if(global.risometro_azul >= 10) {
+	hasWinner = true
+	
 	global.blueWins++
-	gameReset()
-}
+	winCutscene(oPlayer1);
+	}
 
-if(global.risometro_laranja >= 10) {
-	global.orangeWins++
-	gameReset()
+	if(global.risometro_laranja >= 10) {
+		hasWinner = true
+	 
+		global.orangeWins++
+		winCutscene(oPlayer2);
+	}	
 }

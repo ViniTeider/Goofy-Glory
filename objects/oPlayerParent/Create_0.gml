@@ -76,3 +76,10 @@ function hit(dano) {
 			break;
 	}
 }
+
+// ON START
+with instance_create_layer(x, y, "Instances", oPunchGun) {
+	other.weapon = self;
+	state = ARMA.OWNED;
+	owner = other;
+}
