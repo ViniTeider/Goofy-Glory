@@ -9,6 +9,8 @@ cooldown = 0
 
 function action() {
 	if uses <= 0 return; // ora ora retornar se não pode usar
+	
+	audio_play_sound(hit1,0,false,1,0);
 		
 	with instance_create_layer(x, y, "Instances", oPie) {
 		image_angle = other.image_angle; // só pro sprite nao ficar o mesmo
