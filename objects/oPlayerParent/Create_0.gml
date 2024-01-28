@@ -68,11 +68,11 @@ function hit(dano) {
 	switch myColor {
 		case COLOR.BLUE:
 			global.risometro_laranja += dano;
-			global.risometro_azul = max(0, global.risometro_azul - dano);
+			global.risometro_azul = max(0, global.risometro_azul - dano*0.5);
 			break;
 		case COLOR.ORANGE:
 			global.risometro_azul += dano;
-			global.risometro_laranja = max(0, global.risometro_laranja - dano);
+			global.risometro_laranja = max(0, global.risometro_laranja - dano*0.5);
 			break;
 	}
 }
