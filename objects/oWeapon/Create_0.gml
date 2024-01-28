@@ -49,68 +49,65 @@ function action() {
 	show_debug_message($"Action for object: {object_get_name(object_index)}")
 };
 
+// Weapon Create
 function owned() {
 	moving = abs(owner.hsp) + abs(owner.vsp)
 		
-		 
+	// Caso o usuário tenha controle
+	if owner.has_controller {
+		var joystick_h = gamepad_axis_value(owner.gp_index, gp_axisrh);
+		var joystick_v = gamepad_axis_value(owner.gp_index, gp_axisrv);
 		
+		var distance = 35; // Distancia da arma do player
 		
-		// Caso o usuário tenha controle
-		if owner.has_controller {
-				depth = owner.depth - 1; // Faz com que a arma não fique por baixo do player
-				
-				var joystick_h = gamepad_axis_value(owner.gp_index, gp_axisrh);
-				var joystick_v = gamepad_axis_value(owner.gp_index, gp_axisrv);
-		
-				var distance = 35; // Distancia da arma do player
-		
-				// Rotaciona para a direção do joystick
-				if ((point_direction(0, 0, joystick_h, joystick_v)) != 0) {
-					angle = point_direction(0, 0, joystick_h, joystick_v);
-					
-					//Faz com que a arma não fique de ponta cabeça
-					if (sign(owner.hsp != 0)){
-						image_yscale = owner.image_xscale;
-					}
-				}
-				
-				image_angle = angle;
-					
-				x = owner.x + lengthdir_x(distance, angle);
-				y = owner.y + lengthdir_y(distance, angle);
+		// Rotaciona para a direção do joystick
+		if ((point_direction(0, 0, joystick_h, joystick_v)) != 0) {
+			angle = point_direction(0, 0, joystick_h, joystick_v);
+		}
 
-		}
-		// Caso não tenha controle (no teclado) e esteja se movendo
-		else if(moving) {
-			// Separa a arma do player
-			x = owner.x + (sign(owner.hsp) * 13);
-			y = owner.y + (sign(owner.vsp) * 20);
-			// Rotaciona a arma
-			image_angle = point_direction(0, 0, owner.hsp, owner.vsp);
+		image_angle = angle;
+		if image_angle > 90 and image_angle < 270 image_yscale = -1
+		else image_yscale = 1
+		
+		if image_angle < 180 depth = owner.depth + 1
+		else depth = owner.depth - 1
+					
+		x = owner.x + lengthdir_x(distance, angle);
+		y = owner.y + lengthdir_y(distance, angle);
+
+	}
+	// Caso não tenha controle (no teclado) e esteja se movendo
+	else if(moving) {
+		// Separa a arma do player
+		x = owner.x + (sign(owner.hsp) * 13);
+		y = owner.y + (sign(owner.vsp) * 20);
+		// Rotaciona a arma
+		image_angle = point_direction(0, 0, owner.hsp, owner.vsp);
 			
-			// Coloca a arma por baixo caso esteja indo para cima
-			if (sign(owner.vsp) < 0) depth = owner.depth + 1;	
-			else depth = owner.depth - 1;
-		}
+		// Coloca a arma por baixo caso esteja indo para cima
+		if (sign(owner.vsp) < 0) depth = owner.depth + 1;	
+		else depth = owner.depth - 1;
+	}
 		
 	
-		// vamos tirando o cooldown a cada frame
-		if cooldown > 0 {
-			cooldown--;	
-		}
+	// vamos tirando o cooldown a cada frame
+	if cooldown > 0 {
+		cooldown--;	
+	}
 		
-		if owner.action_key && cooldown <= 0 {
-			action();
-			cooldown = cooldown_max;
-			return;
-		}
+	if owner.action_key && cooldown <= 0 {
+		action();
+		cooldown = cooldown_max;
+		return;
+	}
 		
-		if owner.pick_key {
-			owner.weapon = noone;
-			state = ARMA.GROUND;
-			owner = noone;
-		}
+	if owner.pick_key {
+		owner.weapon = noone;
+		state = ARMA.GROUND;
+		owner = noone;
+	}
 }
+
 
 function ground() {
 	player_contact = instance_place(x, y, oPlayerParent);
