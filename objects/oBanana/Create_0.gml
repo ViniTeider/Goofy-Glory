@@ -10,6 +10,7 @@ cooldown = 0;
 setted = false;
 
 function action() {
+	audio_play_sound(hit1,0,false,1,0);
 	if uses <= 0 return; // ora ora retornar se não pode usar!
 	
 	show_debug_message($"Atirou: {object_get_name(object_index)}")
