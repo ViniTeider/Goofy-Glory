@@ -5,7 +5,8 @@
 event_inherited();
 
 uses = 1;
-cooldown = 0
+cooldown = 0;
+dizzy = noone;
 
 function action() {
 	if uses <= 0 return; // ora ora retornar se não pode usar

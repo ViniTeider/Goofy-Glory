@@ -57,8 +57,8 @@ function owned() {
 	// Caso o usuário tenha controle
 	if owner.has_controller {
 		// Mira com o jostick direito
-		var joystick_h = gamepad_axis_value(owner.gp_index, gp_axisrh);
-		var joystick_v = gamepad_axis_value(owner.gp_index, gp_axisrv);
+		//var joystick_h = gamepad_axis_value(owner.gp_index, gp_axisrh);
+		//var joystick_v = gamepad_axis_value(owner.gp_index, gp_axisrv);
 		// mira com o joystick esquerdo
 		var joystick_v = gamepad_axis_value(owner.gp_index, gp_axislv);
 		var joystick_h = gamepad_axis_value(owner.gp_index, gp_axislh);
