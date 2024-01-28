@@ -7,6 +7,8 @@ moving_sprite = sPlayer1Running;
 // Weapon que está sendo usada
 weapon = noone;
 
+multiplier = global.time_on_screen / 1800;
+
 // Variaveis de botões a serem apertados
 left_key = noone;
 right_key = noone;
@@ -66,17 +68,16 @@ function hit(dano) {
 	
 	oKing.laugh_time = 60;
 	
-	
 	switch myColor {
 		case COLOR.BLUE:
-			global.risometro_laranja += dano;
+			global.risometro_laranja += dano * (1 + multiplier);
 			moveDir = -1
-			global.risometro_azul = max(0, global.risometro_azul - dano*0.5);
+			global.risometro_azul = max(0, global.risometro_azul - (dano*(0.5 - 0.3 * multiplier)));
 			break;
 		case COLOR.ORANGE:
-			global.risometro_azul += dano;
+			global.risometro_azul += dano * (1 + multiplier);
 			moveDir = 1
-			global.risometro_laranja = max(0, global.risometro_laranja - dano*0.5);
+			global.risometro_laranja = max(0, global.risometro_laranja - (dano*(0.5 - 0.3 * multiplier)))
 			break;
 	}
 

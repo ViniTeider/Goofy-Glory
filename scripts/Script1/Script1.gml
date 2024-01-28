@@ -11,6 +11,7 @@ global.risometro_azul = 0;
 global.orangeWins = 0
 global.blueWins = 0
 global.roundQuantity = 3;
+global.time_on_screen = 0;
 
 enum COLOR {
 	BLUE,

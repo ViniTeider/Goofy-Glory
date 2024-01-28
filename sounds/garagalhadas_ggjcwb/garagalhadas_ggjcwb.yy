@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 4.92,
+  "duration": 1.92,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "garagalhadas_ggjcwb.mp3",
   "type": 0,
-  "volume": 0.76,
+  "volume": 0.63,
 }

@@ -1,6 +1,8 @@
 hasWinner = false;
+global.time_on_screen = 0;
 
-alarm[1] = 600;
+alarm[1] = 1;
+alarm[2] = 1
 
 function winCutscene(looser) {
 	var anvilX = looser.x;
@@ -11,7 +13,7 @@ function winCutscene(looser) {
 	
 	instance_destroy(looser.weapon);
 	looser.weapon = noone;
-	
+	looser.image_angle = 0;
 	anvil = instance_create_layer(anvilX, anvilY, "Instances", oAnvil);
 	anvil.owner = looser;
 	

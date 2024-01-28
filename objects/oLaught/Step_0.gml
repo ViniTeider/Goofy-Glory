@@ -1,4 +1,4 @@
 /// @desc Insert description here
 
 x += moveDir;
-y = wave(-10, 10, 0.25,0) + 100;
+y = wave(-35, 35, 2,0) + 100;
