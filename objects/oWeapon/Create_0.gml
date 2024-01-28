@@ -52,10 +52,7 @@ function action() {
 function owned() {
 	moving = abs(owner.hsp) + abs(owner.vsp)
 		
-		 //Faz com que a arma não fique de ponta cabeça
-		if (sign(owner.hsp != 0)){
-			image_yscale = owner.image_xscale;
-		}
+		 
 		
 		
 		// Caso o usuário tenha controle
@@ -70,6 +67,11 @@ function owned() {
 				// Rotaciona para a direção do joystick
 				if ((point_direction(0, 0, joystick_h, joystick_v)) != 0) {
 					angle = point_direction(0, 0, joystick_h, joystick_v);
+					
+					//Faz com que a arma não fique de ponta cabeça
+					if (sign(owner.hsp != 0)){
+						image_yscale = owner.image_xscale;
+					}
 				}
 				
 				image_angle = angle;

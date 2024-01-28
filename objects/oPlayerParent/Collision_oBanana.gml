@@ -17,7 +17,9 @@ if (other.state == ARMA.THROWN && other.owner_id != id){
 
 // HIT NA BANANA NO CHAO
 if (other.setted == true && state != PLAYER.STUNNED){
+	audio_play_sound(assobio_FUIUUUU_ggjcwb,0,false,1,0)
 	knockback(10, other.image_angle-180);
+	
 	hit(1);
 	
 	if surface_exists(oDebrisManager.debris_surface) {

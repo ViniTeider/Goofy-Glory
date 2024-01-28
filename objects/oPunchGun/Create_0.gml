@@ -13,6 +13,7 @@ function action() {
 	//gamepad_set_vibration(owner.gp_index, 1, 1);
 	
 	screenshake(05, 1.1, 0.2);
+	audio_play_sound(bilisque_piu_ggjcwb,0,false,1,0)
 	
 	// essse trecho é só pra fazer a bala sair da ponta da vuvuzela ao invés de dentro do personagem
 	var vuvux = x + lengthdir_x((sprite_width - sprite_xoffset), image_angle);
