@@ -112,7 +112,7 @@ function owned() {
 function ground() {
 	player_contact = instance_place(x, y, oPlayerParent);
 	with player_contact {
-		if pick_key && weapon == noone {
+		if pick_key && weapon == noone && !pied {
 			other.state = ARMA.OWNED;
 			other.owner = self;
 			weapon = other;

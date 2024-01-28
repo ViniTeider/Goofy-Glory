@@ -3,7 +3,6 @@
 enum PLAYER {
 	NORMAL, // 0
 	STUNNED, // 1
-	PIED
 }
 
 global.risometro_laranja = 0;

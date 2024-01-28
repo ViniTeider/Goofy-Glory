@@ -35,6 +35,9 @@ gp_index = noone;
 controller_color = noone;
 has_controller= noone;
 
+pied = false;
+pie = noone;
+
 // Função de knockback (é chamada quando o player colide)
 function knockback(distancia, direcao) {
 	// TODO: Arrumar para ir mais rapido e menos longe?
