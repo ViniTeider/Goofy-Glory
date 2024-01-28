@@ -4,7 +4,8 @@ enum ARMA {
 	GROUND, // 0
 	OWNED, // 1
 	THROWN, // 2
-	PIED
+	PIED,
+	SPAWN
 }
 
 // Stats das armas
@@ -14,7 +15,7 @@ cooldown_max = 60 // o jogo roda a 60 fps o step roda 60vezes por segundo
 			 
 cooldown = cooldown_max
 uses = 0;
-
+defaultImageIndex = image_index
 
 state = ARMA.GROUND;
 player_contact = noone;
@@ -110,7 +111,9 @@ function owned() {
 
 
 function ground() {
-	player_contact = instance_place(x, y, oPlayerParent);
+	//player_contact = instance_place(x, y, oPlayerParent);
+	player_contact = collision_circle(x, y, 40, oPlayerParent, false, true)
+	
 	with player_contact {
 		if pick_key && weapon == noone && !pied {
 			other.state = ARMA.OWNED;
@@ -148,6 +151,21 @@ function thrown() {
 
 		hsp = lerp(hsp, 0, 0.01);
 		vsp = lerp(vsp, 0, 0.01);
+}
+
+function spawn() {
+	if ((hsp >= -2 && hsp <= 2) && (vsp >= -2 && vsp <= 2)){
+		hsp = 0;
+		vsp = 0;
+			
+		state = ARMA.GROUND;
+	}
+
+	x += hsp; 
+	y += vsp;
+
+	hsp = lerp(hsp, 0, 0.01);
+	vsp = lerp(vsp, 0, 0.01);
 }
 
 function pie() {

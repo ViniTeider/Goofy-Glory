@@ -4,14 +4,12 @@
 show_debug_message(global.risometro_azul)
 show_debug_message(global.risometro_laranja)
 
-if(global.risometro_azul >= 7) {
-	show_debug_message("azul ganhou");
+if(global.risometro_azul >= 10) {
 	global.blueWins++
 	gameReset()
 }
 
-if(global.risometro_laranja >= 7) {
-	show_debug_message("laranja ganhou");
+if(global.risometro_laranja >= 10) {
 	global.orangeWins++
 	gameReset()
 }

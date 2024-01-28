@@ -53,6 +53,12 @@ function knockback(distancia, direcao) {
 }
 
 function hit(dano) {
+	if(pied) {
+		pied = false
+		instance_destroy(pie);
+		pie = noone;
+	}
+	
 	oKing.laugh_time = 60;
 	
 	with instance_create_layer(oKing.x, oKing.y - oKing.sprite_yoffset, "Instances", oFloatingText) {

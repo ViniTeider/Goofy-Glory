@@ -17,7 +17,7 @@ function action() {
 	var vuvux = x + lengthdir_x((sprite_width - sprite_xoffset), image_angle);
 	var vuvuy = y + lengthdir_y((sprite_width - sprite_xoffset), image_angle);
 	
-	with instance_create_layer(vuvux, vuvuy, "Instances", oProjectile) {
+	with instance_create_layer(vuvux, vuvuy, "Instances", oPunch) {
 		image_angle = other.image_angle; // só pro sprite nao ficar o mesmo
 		direction = other.image_angle; // direção vai ser pra onde a vuvu aponta
 		speed = 14; // valor arbitrário mudar conforme necessidade

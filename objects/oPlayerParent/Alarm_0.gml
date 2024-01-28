@@ -3,3 +3,4 @@
 
 pied = false
 instance_destroy(pie)
+pie = noone;

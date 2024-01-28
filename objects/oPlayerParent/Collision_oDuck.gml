@@ -14,7 +14,3 @@ if (other.owner != self && other.state == ARMA.THROWN && other.owner_id != id){
 		}
 	}
 }
-
-
-
-

@@ -6,9 +6,13 @@ if (other.owner != self && other.state == ARMA.THROWN && other.owner_id != id){
 	other.sprite_index = sPieHit;
 	other.image_angle  = 0;
 	
-	weapon.state = ARMA.GROUND;
-	weapon.owner = noone;
-	weapon = noone;
+	if(weapon) {
+		weapon.state = ARMA.GROUND;
+		weapon.image_angle = 0
+		weapon.image_index = weapon.defaultImageIndex
+		weapon.owner = noone;
+		weapon = noone;
+	}
 	pied = true
 	pie = other;
 	alarm[0] = 180

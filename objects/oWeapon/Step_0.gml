@@ -1,8 +1,5 @@
 /// @desc Insert description here
 
-
-// Checa se o player ta em contato, e também guarda a instancia do player q tá em cima;
-
 switch state {
 	case ARMA.GROUND:
 		ground();
@@ -10,10 +7,13 @@ switch state {
 	case ARMA.OWNED:
 		owned();
 		break;
-
 	case ARMA.THROWN:
 		thrown();
 		break;
 	case ARMA.PIED:
 		pie();
+		break;
+	case ARMA.SPAWN:
+		spawn();
+		break;
 }

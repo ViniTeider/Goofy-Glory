@@ -15,3 +15,9 @@ enum COLOR {
 	BLUE,
 	ORANGE
 }
+
+randomize()
+
+function randInt(from, to) {
+	return from + floor(random(to - from))
+}

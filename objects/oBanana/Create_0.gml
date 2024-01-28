@@ -49,11 +49,36 @@ function thrown() {
 		vsp = -vsp; // inverte a direção 
 	}
 		
+	if ((hsp >= -2 && hsp <= 2) && (vsp >= -2 && vsp <= 2) && setted = false){
+		hsp = 0;
+		vsp = 0;
+		setted = true;
+		sprite_index = sBananaGround;
+		image_angle = 0;
+		state = -1;
+	}
+
+	x += hsp; 
+	y += vsp;
+
+	hsp = lerp(hsp, 0, 0.01);
+	vsp = lerp(vsp, 0, 0.01);
+}
+
+function spawn() {
 	if ((hsp >= -2 && hsp <= 2) && (vsp >= -2 && vsp <= 2)){
 		hsp = 0;
 		vsp = 0;
-			
-		state = ARMA.GROUND;
+		
+		if(random(1) < 0.3) {
+			setted = true;
+			sprite_index = sBananaGround;
+			image_angle = 0;
+			state = -1;
+		}
+		else {
+			state = ARMA.GROUND;
+		}
 	}
 
 	x += hsp; 
