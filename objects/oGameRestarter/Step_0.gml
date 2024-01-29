@@ -4,4 +4,6 @@ start_button = keyboard_check(vk_enter) || gamepad_button_check_pressed(gp_index
 if (start_button) {
 	//draw_clear_alpha(c_black, 1);
 	room_goto(Menu);
+	global.blueWins = 0
+	global.orangeWins = 0
 }

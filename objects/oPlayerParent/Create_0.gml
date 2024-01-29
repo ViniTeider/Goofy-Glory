@@ -70,12 +70,12 @@ function hit(dano) {
 	
 	switch myColor {
 		case COLOR.BLUE:
-			global.risometro_laranja += dano * (1 + multiplier);
+			global.risometro_laranja += dano// * (1 + multiplier * 2);
 			moveDir = -1
 			global.risometro_azul = max(0, global.risometro_azul - (dano*(0.5 - 0.3 * multiplier)));
 			break;
 		case COLOR.ORANGE:
-			global.risometro_azul += dano * (1 + multiplier);
+			global.risometro_azul += dano// * (1 + multiplier * 2);
 			moveDir = 1
 			global.risometro_laranja = max(0, global.risometro_laranja - (dano*(0.5 - 0.3 * multiplier)))
 			break;
